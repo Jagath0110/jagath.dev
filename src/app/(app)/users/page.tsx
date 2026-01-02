@@ -20,6 +20,8 @@ import {
 import { getUsersData } from "@/lib/api";
 import type { User } from "@/lib/types";
 
+export const runtime = "edge";
+
 const statusVariant = (status: User["status"]) => {
   if (status === "Active") return "success" as const;
   if (status === "Invited") return "info" as const;

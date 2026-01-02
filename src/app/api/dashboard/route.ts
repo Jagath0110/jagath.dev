@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 
 import type { DashboardResponse } from "@/lib/types";
 
+export const runtime = "edge";
+
 const dashboardData: DashboardResponse = {
   kpis: [
     {

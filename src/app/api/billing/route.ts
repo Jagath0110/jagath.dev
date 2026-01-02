@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 
 import type { BillingResponse } from "@/lib/types";
 
+export const runtime = "edge";
+
 const billingData: BillingResponse = {
   plan: {
     name: "Growth",

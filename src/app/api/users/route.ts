@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 
 import type { UsersResponse } from "@/lib/types";
 
+export const runtime = "edge";
+
 const usersData: UsersResponse = {
   users: [
     {

@@ -17,6 +17,8 @@ import {
 } from "@/components/ui/table";
 import { getBillingData } from "@/lib/api";
 
+export const runtime = "edge";
+
 export default async function BillingPage() {
   const { plan, usage, summary, invoices } = await getBillingData();
 

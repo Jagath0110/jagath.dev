@@ -19,6 +19,8 @@ import {
 } from "@/components/ui/table";
 import { getDashboardData } from "@/lib/api";
 
+export const runtime = "edge";
+
 export default async function DashboardPage() {
   const { kpis, activity, revenue } = await getDashboardData();
 
