@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f8fc;
+  --surface: #ffffff;
+  --surface-2: #f0f4fb;
+  --border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --brand: #1f5eff;
+  --brand-600: #1b4fe0;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --sidebar-bg: #f2f5fb;
+  --sidebar-active: #e8eefc;
+}
+
+:root[data-theme="dark"] {
+  --background: #0b1020;
+  --surface: #11162b;
+  --surface-2: #151b33;
+  --border: #222a45;
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --brand: #6aa2ff;
+  --brand-600: #5a90f0;
+  --sidebar-bg: #0f1529;
+  --sidebar-active: #172244;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-brand: var(--brand);
+  --color-brand-600: var(--brand-600);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-active: var(--sidebar-active);
+  --font-sans: var(--font-plus-jakarta);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: #0b1020;
+    --surface: #11162b;
+    --surface-2: #151b33;
+    --border: #222a45;
+    --text-primary: #e2e8f0;
+    --text-muted: #94a3b8;
+    --brand: #6aa2ff;
+    --brand-600: #5a90f0;
+    --sidebar-bg: #0f1529;
+    --sidebar-active: #172244;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+}
+
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
