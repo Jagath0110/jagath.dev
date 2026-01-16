@@ -13,7 +13,7 @@ import {
 import { cn } from "@/lib/cn";
 
 const navItems = [
-  { label: "Dashboard", href: "/", icon: IconDashboard },
+  { label: "Dashboard", href: "/dashboard", icon: IconDashboard },
   { label: "Users", href: "/users", icon: IconUsers },
   { label: "Billing", href: "/billing", icon: IconCreditCard },
   { label: "Components", href: "/components", icon: IconLayers },
@@ -38,7 +38,9 @@ export default function Sidebar() {
       <nav className="mt-6 flex flex-1 flex-row gap-1 overflow-x-auto md:mt-8 md:flex-col md:overflow-visible">
         {navItems.map((item) => {
           const isActive =
-            item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            item.href === "/dashboard"
+              ? pathname === "/dashboard"
+              : pathname.startsWith(item.href);
           const Icon = item.icon;
 
           return (
