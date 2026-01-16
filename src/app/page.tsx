@@ -59,6 +59,13 @@ const projects: ProjectItem[] = [
     badges: ["Live"],
     tint: "from-[#a462ff] via-[#8b4cff] to-[#6d36ee]",
   },
+  {
+    name: "FlowAdmin Dashboard",
+    summary: "Multi-tenant admin dashboard",
+    stack: "Next.js TypeScript Tailwind",
+    badges: ["Live"],
+    tint: "from-[#5a90f0] via-[#3b82f6] to-[#1f5eff]",
+  },
 ];
 
 const capabilities: CapabilityItem[] = [
